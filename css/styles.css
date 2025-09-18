@@ -1,138 +1,209 @@
-/* General Body and Typography */
+/* 1. VARIABLES & GENERAL STYLES */
+:root {
+    --primary-green: #006648; /* Deep, premium green */
+    --accent-orange: #F58220;   /* Bright, friendly orange for buttons */
+    --light-bg: #F5F5F1;        /* Warm off-white background */
+    --dark-text: #222222;       /* Dark grey for text */
+    --light-text: #FFFFFF;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
-    padding: 0;
-    color: #333;
+    color: var(--dark-text);
+    background-color: #FFFFFF;
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-/* Header and Navigation */
-header {
-    background: #fff;
-    color: #333;
-    padding-top: 20px;
-    min-height: 80px;
-    border-bottom: #4CAF50 3px solid;
+h1, h2, h3 {
+    font-weight: 700;
 }
 
-header #logo {
-    float: left;
-    margin-top: -10px;
-}
-
-header nav {
-    float: right;
-    margin-top: 15px;
-}
-
-header nav ul {
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    display: inline;
-    padding: 0 20px;
-}
-
-header a {
-    color: #333;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-header a:hover {
-    color: #4CAF50;
-}
-
-/* Hero Section (Banner) */
-#hero {
-    min-height: 300px;
-    /* The background image for the hero banner */
-    background: url('../images/hero-image.jpg') no-repeat center center/cover;
+h2 {
     text-align: center;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* This color will show if the image is missing */
-    background-color: #8bc34a; 
+    font-size: 2.5rem;
+    color: var(--primary-green);
+    margin-bottom: 50px;
 }
 
-#hero h1 {
-    font-size: 45px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow to text for readability */
-}
-
-/* General Section Styling */
 section {
-    padding: 40px 0;
-    border-bottom: 1px #ddd solid;
-    text-align: center;
+    padding: 80px 0;
 }
 
-section h2 {
-    font-size: 32px;
+/* 2. HEADER */
+header {
+    background-color: var(--light-text);
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img {
+    height: 50px; /* Adjust as needed */
+}
+
+header nav a {
+    color: var(--primary-green);
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 30px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--accent-orange);
+}
+
+/* 3. HERO SECTION */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--light-text);
+    text-align: center;
+    padding: 120px 0;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
     margin-bottom: 20px;
-    color: #4CAF50;
 }
 
-/* Products Table Styling */
-#products table {
-    width: 100%; /* Make table wider to accommodate images */
-    margin-top: 30px;
-    border-collapse: collapse;
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
-#products th, #products td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-    vertical-align: middle; /* Aligns text vertically with the center of the images */
+.btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
 }
 
-#products th {
-    background-color: #f2f2f2;
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: var(--light-text);
 }
 
-#products img {
-    border-radius: 8px; /* Optional: adds rounded corners to product images */
+.btn-primary:hover {
+    background-color: #e06a10;
+    transform: translateY(-2px);
 }
 
-/* Contact Section Styling */
-#contact .contact-info {
-    float: left;
-    width: 40%;
-    text-align: left;
+/* 4. ABOUT SECTION */
+#about {
+    background-color: var(--light-bg);
 }
 
-#contact .map-placeholder {
-    float: right;
-    width: 55%;
+.about-image {
+    max-width: 600px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto 30px;
 }
 
-/* Footer Styling */
-footer {
-    padding: 20px;
-    margin-top: 20px;
-    color: #fff;
-    background-color: #4CAF50;
+#about p {
     text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
 }
 
-/* Clearfix: A utility to contain floated elements */
-.container:after {
-    content: "";
-    display: table;
-    clear: both;
+/* 5. PRODUCTS SECTION */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    color: var(--primary-green);
+}
+
+.product-card .price {
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+/* 6. CONTACT SECTION */
+#contact {
+    background-color: var(--light-bg);
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.contact-info, .map {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info p {
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.map img {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* 7. FOOTER */
+footer {
+    background-color: var(--primary-green);
+    color: var(--light-text);
+    text-align: center;
+    padding: 20px 0;
 }
