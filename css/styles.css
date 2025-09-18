@@ -1,5 +1,93 @@
-/* Add this to your existing styles.css file */
+/* General Body and Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
 
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Header and Navigation */
+header {
+    background: #fff;
+    color: #333;
+    padding-top: 20px;
+    min-height: 80px;
+    border-bottom: #4CAF50 3px solid;
+}
+
+header #logo {
+    float: left;
+    margin-top: -10px;
+}
+
+header nav {
+    float: right;
+    margin-top: 15px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #4CAF50;
+}
+
+/* Hero Section (Banner) */
+#hero {
+    min-height: 300px;
+    /* The background image for the hero banner */
+    background: url('../images/hero-image.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* This color will show if the image is missing */
+    background-color: #8bc34a; 
+}
+
+#hero h1 {
+    font-size: 45px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow to text for readability */
+}
+
+/* General Section Styling */
+section {
+    padding: 40px 0;
+    border-bottom: 1px #ddd solid;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+/* Products Table Styling */
 #products table {
     width: 100%; /* Make table wider to accommodate images */
     margin-top: 30px;
@@ -10,7 +98,7 @@
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
-    vertical-align: middle; /* This is the key property to align text with images */
+    vertical-align: middle; /* Aligns text vertically with the center of the images */
 }
 
 #products th {
@@ -18,5 +106,33 @@
 }
 
 #products img {
-    border-radius: 8px; /* Optional: adds rounded corners to images */
+    border-radius: 8px; /* Optional: adds rounded corners to product images */
+}
+
+/* Contact Section Styling */
+#contact .contact-info {
+    float: left;
+    width: 40%;
+    text-align: left;
+}
+
+#contact .map-placeholder {
+    float: right;
+    width: 55%;
+}
+
+/* Footer Styling */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #4CAF50;
+    text-align: center;
+}
+
+/* Clearfix: A utility to contain floated elements */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
 }
