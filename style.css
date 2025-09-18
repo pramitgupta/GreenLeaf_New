@@ -1,0 +1,124 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+header {
+    background: #fff;
+    color: #333;
+    padding-top: 20px;
+    min-height: 80px;
+    border-bottom: #4CAF50 3px solid;
+}
+
+header #logo {
+    float: left;
+    margin-top: -10px;
+}
+
+header nav {
+    float: right;
+    margin-top: 15px;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    padding: 0 20px;
+}
+
+header a {
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #4CAF50;
+}
+
+#hero {
+    min-height: 300px;
+    background: url('https') no-repeat 0 -200px; /* Placeholder for a hero image */
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8bc34a; /* Fallback color */
+}
+
+#hero h1 {
+    font-size: 45px;
+}
+
+section {
+    padding: 40px 0;
+    border-bottom: 1px #ddd solid;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #4CAF50;
+}
+
+#products table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+#products th, #products td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+#products th {
+    background-color: #f2f2f2;
+}
+
+#contact .contact-info {
+    float: left;
+    width: 40%;
+    text-align: left;
+}
+
+#contact .map-placeholder {
+    float: right;
+    width: 55%;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #4CAF50;
+    text-align: center;
+}
+
+/* Clearfix */
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
