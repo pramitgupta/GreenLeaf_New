@@ -10,239 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     
-    <!-- All CSS is included below in the <style> tag for easy testing -->
-    <style>
-        /* 1. VARIABLES & GENERAL STYLES */
-        :root {
-            --primary-green: #006648; /* Deep, premium green */
-            --accent-orange: #F58220;   /* Bright, friendly orange for buttons */
-            --light-bg: #F5F5F1;        /* Warm off-white background */
-            --dark-text: #222222;       /* Dark grey for text */
-            --light-text: #FFFFFF;
-        }
-
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            color: var(--dark-text);
-            background-color: #FFFFFF;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        h1, h2, h3 {
-            font-weight: 700;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            color: var(--primary-green);
-            margin-bottom: 50px;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        /* 2. HEADER */
-        header {
-            background-color: var(--light-text);
-            padding: 15px 0;
-            border-bottom: 1px solid #e0e0e0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        #logo img {
-            height: 50px;
-        }
-
-        header nav a {
-            color: var(--primary-green);
-            text-decoration: none;
-            font-weight: 600;
-            margin-left: 30px;
-            transition: color 0.3s;
-        }
-
-        header nav a:hover {
-            color: var(--accent-orange);
-        }
-
-        /* 3. HERO SECTION */
-        #hero {
-            /* Using a placeholder hero image */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://placehold.co/1600x800/8bc34a/FFFFFF?text=GreenLeaf+Organics');
-            background-size: cover;
-            background-position: center;
-            color: var(--light-text);
-            text-align: center;
-            padding: 120px 0;
-        }
-
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
-
-        .btn {
-            text-decoration: none;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-orange);
-            color: var(--light-text);
-        }
-
-        .btn-primary:hover {
-            background-color: #e06a10;
-            transform: translateY(-2px);
-        }
-
-        /* 4. ABOUT SECTION */
-        #about {
-            background-color: var(--light-bg);
-        }
-
-        .about-image {
-            max-width: 600px;
-            border-radius: 10px;
-            display: block;
-            margin: 0 auto 30px;
-        }
-
-        #about p {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        /* 5. PRODUCTS SECTION */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-
-        .product-card {
-            background: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            text-align: center;
-            padding: 20px;
-            transition: box-shadow 0.3s, transform 0.3s;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
-        }
-
-        .product-card img {
-            max-width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
-
-        .product-card h3 {
-            margin: 10px 0;
-            color: var(--primary-green);
-        }
-
-        .product-card .price {
-            font-weight: 600;
-            color: var(--dark-text);
-        }
-
-        /* 6. SOCIAL (FACEBOOK) SECTION - NEW */
-        #social {
-             background-color: #FFFFFF;
-        }
-        .facebook-embed-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        /* 7. CONTACT SECTION */
-        #contact {
-            background-color: var(--light-bg);
-        }
-
-        .contact-details {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .contact-info, .map {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .contact-info p {
-            line-height: 1.8;
-        }
-
-        .contact-info a {
-            color: var(--primary-green);
-            text-decoration: none;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Styling for the new Google Maps iframe */
-        .map iframe {
-            width: 100%;
-            height: 450px;
-            border: 0;
-            border-radius: 10px;
-        }
-
-
-        /* 8. FOOTER */
-        footer {
-            background-color: var(--primary-green);
-            color: var(--light-text);
-            text-align: center;
-            padding: 20px 0;
-        }
-
-    </style>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
     <header>
         <div class="container">
-            <a href="#" id="logo"><img src="https://placehold.co/150x50/006648/FFFFFF?text=GreenLeaf" alt="GreenLeaf Organics Logo"></a>
+            <a href="#" id="logo"><img src="images/logo.png" alt="GreenLeaf Organics Logo"></a>
             <nav>
                 <a href="#about">About</a>
                 <a href="#products">Products</a>
@@ -253,18 +28,26 @@
     </header>
 
     <main>
-        <section id="hero">
-            <div class="hero-content">
-                <h1>Nourishing Hyderabad, Naturally.</h1>
-                <p>Discover the finest certified organic produce, sourced from local farms and delivered with care.</p>
-                <a href="#products" class="btn btn-primary">Explore Our Products</a>
+        <!-- NEW AUTO-SCROLLING IMAGE SLIDER -->
+        <section id="image-slider">
+            <div class="slider-track">
+                <!-- First set of images -->
+                <div class="slide"><img src="images/B1.png" alt="Fresh organic produce"></div>
+                <div class="slide"><img src="images/B2.png" alt="Healthy grains and pulses"></div>
+                <div class="slide"><img src="images/B3.png" alt="Happy customers in our store"></div>
+                <div class="slide"><img src="images/B4.png" alt="Our local farm partner"></div>
+                <!-- Duplicate set for seamless loop -->
+                <div class="slide"><img src="images/B1.png" alt="Fresh organic produce"></div>
+                <div class="slide"><img src="images/B2.png" alt="Healthy grains and pulses"></div>
+                <div class="slide"><img src="images/B3.png" alt="Happy customers in our store"></div>
+                <div class="slide"><img src="images/B4.png" alt="Our local farm partner"></div>
             </div>
         </section>
 
         <section id="about">
             <div class="container">
                 <h2>Our Commitment to Purity</h2>
-                <img src="https://placehold.co/600x400/8bc34a/FFFFFF?text=Our+Store" alt="A bright, welcoming photo of the GreenLeaf Organics store" class="about-image">
+                <img src="images/store-photo.jpg" alt="A bright, welcoming photo of the GreenLeaf Organics store" class="about-image">
                 <p>At GreenLeaf Organics, we believe that healthy living starts with healthy eating. Located in the heart of Gachibowli, we are dedicated to providing health-conscious families in Hyderabad with the freshest, highest-quality organic produce. We partner with local farmers who share our commitment to sustainable and chemical-free agriculture. From farm to your table, we ensure that every product on our shelves is pure, nutritious, and full of natural flavor.</p>
             </div>
         </section>
@@ -307,7 +90,6 @@
             </div>
         </section>
 
-        <!-- NEW SECTION FOR FACEBOOK EMBED -->
         <section id="social">
             <div class="container">
                 <h2>Latest Updates</h2>
@@ -328,7 +110,6 @@
                         <p><strong>Email:</strong> <a href="mailto:greenleaf.organics@mlbm.com">greenleaf.organics@mlbm.com</a></p>
                         <p><strong>Hours:</strong> 9:00 AM - 8:00 PM, Daily</p>
                     </div>
-                    <!-- GOOGLE MAPS EMBED -->
                     <div class="map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.526058424122!2d78.33880187581157!3d17.434517901444405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb939dae6eb775%3A0x1f7a5db82bcfdfe1!2sIndian%20School%20of%20Business%2C%20ISB%20Rd%2C%20Gachibowli%2C%20Hyderabad%2C%20Telangana%20500111!5e0!3m2!1sen!2sin!4v1741251395601!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -343,17 +124,7 @@
         </div>
     </footer>
 
-    <!-- All JavaScript is included below for easy testing -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- Link to your external JavaScript file -->
+    <script src="js/script.js"></script>
 </body>
 </html>
