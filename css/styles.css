@@ -70,33 +70,31 @@ header nav a:hover {
 /* 3. IMAGE SLIDER SECTION */
 #image-slider {
     padding: 0;
-    height: 400px; /* Adjust height as needed */
+    height: 400px;
     margin: auto;
     position: relative;
-    overflow: hidden; /* This hides the parts of the track that are off-screen */
+    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .slider-track {
     display: flex;
-    /* (Width of one image) * (Number of images * 2 for seamless loop) */
     width: calc(400px * 8); 
-    animation: scroll 30s linear infinite; /* Adjust duration for speed */
+    animation: scroll 30s linear infinite;
 }
 
 .slider-track:hover {
-    animation-play-state: paused; /* Pause animation on hover */
+    animation-play-state: paused;
 }
 
 @keyframes scroll {
     0% { transform: translateX(0); }
-    /* (Width of one image) * (Number of original images) */
     100% { transform: translateX(calc(-400px * 4)); } 
 }
 
 .slide {
-    height: 400px; /* Should match the slider height */
-    width: 400px;  /* Set a fixed width for each image container */
+    height: 400px;
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -106,7 +104,7 @@ header nav a:hover {
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures image covers the slide area without distortion */
+    object-fit: cover;
 }
 
 /* 4. ABOUT SECTION */
@@ -128,7 +126,36 @@ header nav a:hover {
     line-height: 1.8;
 }
 
-/* 5. PRODUCTS SECTION */
+/* 5. YOUTUBE VIDEO SECTION (was #story) */
+#story {
+    background-color: #FFFFFF; /* Changed to white for better contrast */
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding-top: 56.25%; /* Aspect ratio 16:9 */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* 6. PRODUCTS SECTION */
+#products {
+    background-color: var(--light-bg); /* Alternating background color */
+}
+
 .product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -167,19 +194,9 @@ header nav a:hover {
     color: var(--dark-text);
 }
 
-/* 6. SOCIAL (FACEBOOK) SECTION */
-#social {
-     background-color: #FFFFFF;
-}
-.facebook-embed-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
 /* 7. CONTACT SECTION */
 #contact {
-    background-color: var(--light-bg);
+    background-color: #FFFFFF;
 }
 
 .contact-details {
