@@ -238,3 +238,67 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+/* ADD THESE NEW STYLES TO THE END OF YOUR CSS FILE */
+
+/* 9. TESTIMONIALS (MANUAL REVIEWS) SECTION */
+#testimonials {
+    background-color: #FFFFFF;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.review-card {
+    background-color: var(--light-bg);
+    border: 1px solid #e0e0e0;
+    border-left: 5px solid var(--primary-green);
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.review-card .stars {
+    color: #f0ad4e; /* A warm yellow for stars */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.review-card blockquote {
+    margin: 0;
+    font-style: italic;
+    color: #555;
+    line-height: 1.7;
+}
+
+.review-card cite {
+    display: block;
+    margin-top: 20px;
+    font-weight: 600;
+    color: var(--primary-green);
+    font-style: normal;
+}
+
+.review-footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--primary-green);
+    border: 2px solid var(--primary-green);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-green);
+    color: var(--light-text);
+}
